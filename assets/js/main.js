@@ -223,20 +223,4 @@
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".portfolio-item");
-  const seeMoreBtn = document.getElementById("seeMoreBtn");
-
-  // Cacher tous les items après le 6ème
-  items.forEach((item, index) => {
-    if (index >= 6) item.style.display = "none";
-  });
-
-  // Afficher tous les items au clic sur le bouton
-  seeMoreBtn.addEventListener("click", () => {
-    items.forEach(item => item.style.display = "block");
-    seeMoreBtn.style.display = "none"; // cacher le bouton après clic
-  });
-});
-
 
