@@ -220,7 +220,54 @@
 
 })();
 
+document.addEventListener("DOMContentLoaded", function () {
+    let items = document.querySelectorAll("#portfolio-container .portfolio-item");
+    let toggleBtn = document.getElementById("toggleBtn");
+    let visibleCount = 3; // combien visibles par défaut
+    let step = 3; // combien en plus par clic
 
+    // Initialise Isotope
+    let iso = new Isotope('#portfolio-container', {
+      itemSelector: '.portfolio-item',
+      layoutMode: 'masonry'
+    });
 
+    // Masquer tous sauf les visibles
+    function showDefault() {
+      items.forEach((item, index) => {
+        item.style.display = index < visibleCount ? "block" : "none";
+      });
+      iso.layout(); // recalcul
+      toggleBtn.textContent = "Voir plus";
+    }
 
+    // Afficher plus
+    function showMore() {
+      let hiddenItems = Array.from(items).filter(item => item.style.display === "none");
+      hiddenItems.slice(0, step).forEach(item => {
+        item.style.display = "block";
+      });
+      iso.layout(); // recalcul
 
+      if (Array.from(items).every(item => item.style.display === "block")) {
+        toggleBtn.textContent = "Voir moins";
+      }
+    }
+
+    // Replier
+    function showLess() {
+      showDefault();
+    }
+
+    // Init
+    showDefault();
+
+    // Toggle bouton
+    toggleBtn.addEventListener("click", function () {
+      if (toggleBtn.textContent === "Voir plus") {
+        showMore();
+      } else {
+        showLess();
+      }
+    });
+  });
