@@ -37,6 +37,37 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      .custom-card {
+        border: 2px solid transparent;
+        border-radius: 20px;
+        padding: 20px;
+        background: linear-gradient(#fff, #fff) padding-box,
+          linear-gradient(135deg, #4facfe, #00f2fe) border-box;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease-in-out;
+        height: 100%;
+      }
+
+      .custom-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .custom-card .card-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .custom-card ul li,
+      .custom-card p {
+        font-size: 0.95rem;
+        color: #444;
+        margin-bottom: 8px;
+      }
+    </style>
   </head>
 
   <body class="index-page">
@@ -96,61 +127,70 @@
             des projets.
           </p>
         </div>
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="container my-5" data-aos="fade-up" data-aos-delay="100">
           <div class="row gy-4 justify-content-center">
-            <div class="col-lg-4">
+            <!-- Photo -->
+            <div class="col-lg-3 text-center">
               <img
                 src="assets/img/ferd.jpg"
-                class="img-fluid"
+                class="img-fluid rounded shadow-lg"
                 alt="Ferdinand KOUADIO"
               />
             </div>
-            <div class="col-lg-8 content">
-              <h2>Développeur Web & Chef de Projet</h2>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
+            <!-- Card 1 : Identité -->
+            <div class="col-lg-3 col-md-6">
+              <div class="custom-card">
+                <div class="card-content">
+                  <h3 class="card-title">👤 Identité</h3>
+                  <ul class="list-unstyled">
+                    <li><strong>Date de naissance :</strong> 07/07/1998</li>
+                    <li><strong>Nationalité :</strong> Ivoirienne</li>
                     <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Date de naissance:</strong> 07/07/1998
+                      <strong>Situation :</strong> Célibataire, sans enfant
                     </li>
                     <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Nationalité:</strong> Ivoirienne
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Situation:</strong> Célibataire sans enfant
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Téléphone (+225):</strong> 07-08-79-27-77 <br />
+                      <strong>Téléphone (+225) :</strong>
                       01-73-83-26-20
+                      <br />
                     </li>
+                    <li><strong>Email :</strong> kouadiof728@gmail.com</li>
                   </ul>
                 </div>
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Email:</strong> kouadiof728@gmail.com
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Langues:</strong> Français Anglais (moyen)
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Atouts:</strong> Ponctualité, Serviable, Sens du
-                      devoir, <br />
-                      Rigueur, Assiduité, Endurance, <br />
-                      Esprit d'équipe, Créativité
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Loisirs:</strong> Football, Musique, Cinéma
-                    </li>
+              </div>
+            </div>
+
+            <!-- Card 2 : Compétences -->
+            <div class="col-lg-3 col-md-6">
+              <div class="custom-card">
+                <div class="card-content">
+                  <h3 class="card-title">💼 Compétences</h3>
+                  <p>Développeur Web & Chef de Projet</p>
+                  <ul class="list-unstyled">
+                    <li>✅ Ponctualité</li>
+                    <li>✅ Serviable & Sens du devoir</li>
+                    <li>✅ Rigueur & Assiduité</li>
+                    <li>✅ Endurance</li>
+                    <li>✅ Esprit d'équipe</li>
+                    <li>✅ Créativité</li>
+                  </ul>
+                  <p><strong>Langues :</strong> Français, Anglais (moyen)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 : Passions -->
+            <div class="col-lg-3 col-md-6">
+              <div class="custom-card">
+                <div class="card-content">
+                  <h3 class="card-title">🎯 Passions</h3>
+                  <p>
+                    En dehors du travail, je cultive des activités qui
+                    nourrissent ma créativité et mon équilibre :
+                  </p>
+                  <ul class="list-unstyled">
+                    <li>⚽ Football</li>
+                    <li>🎵 Musique</li>
+                    <li>🎬 Cinéma</li>
                   </ul>
                 </div>
               </div>
@@ -627,7 +667,6 @@
           <h2>Témoignages Clients</h2>
           <p>Ce que nos clients disent de nos applications et services</p>
         </div>
-        <!-- End Section Title -->
 
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="swiper init-swiper" data-speed="600" data-delay="5000">
@@ -665,13 +704,13 @@
                     <i class="bi bi-quote quote-icon-left"></i>
                     <span
                       >"Grâce à Appliloyers, gérer mes loyers n'a jamais été
-                      aussi simple et rapide. Une équipe très professionnelle
-                      !"</span
+                      aussi simple et rapide. Merci infinement pour
+                      l'application !"</span
                     >
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                   <img
-                    src="assets/img/testimonials/testimonials-1.jpg"
+                    src="assets/img/testimonials/t3.png"
                     class="testimonial-img"
                     alt="Client Appliloyers"
                   />
@@ -692,7 +731,7 @@
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                   <img
-                    src="assets/img/testimonials/testimonials-2.jpg"
+                    src="assets/img/testimonials/t1.png"
                     class="testimonial-img"
                     alt="Client Applihotels"
                   />
@@ -707,18 +746,19 @@
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     <span
-                      >"Appligel a permis d'améliorer notre suivi client et nos
-                      ventes. Une application intuitive et performante."</span
+                      >"Appligel a permis d'améliorer la gestion de notre
+                      etablissement scolaire . Une application flexible et
+                      performante."</span
                     >
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                   <img
-                    src="assets/img/testimonials/testimonials-3.jpg"
+                    src="assets/img/testimonials/t2.png"
                     class="testimonial-img"
                     alt="Client Appligel"
                   />
                   <h3>Ali M.</h3>
-                  <h4>Commerçant</h4>
+                  <h4>Fondatrice d'école</h4>
                 </div>
               </div>
 
@@ -728,103 +768,18 @@
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     <span
-                      >"Boumtik a transformé notre manière de vendre en ligne.
-                      Nos clients adorent l'expérience."</span
+                      >"Boumtik a transformé notre manière de vendre. plus de
+                      casse-tête sur les calculs."</span
                     >
                     <i class="bi bi-quote quote-icon-right"></i>
                   </p>
                   <img
-                    src="assets/img/testimonials/testimonials-4.jpg"
+                    src="assets/img/testimonials/t4.png"
                     class="testimonial-img"
                     alt="Client Boumtik"
                   />
                   <h3>Marie T.</h3>
-                  <h4>Entrepreneure</h4>
-                </div>
-              </div>
-
-              <!-- Témoignage Delifast -->
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span
-                      >"Delifast a optimisé notre service de livraison et la
-                      satisfaction de nos clients est au top."</span
-                    >
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-5.jpg"
-                    class="testimonial-img"
-                    alt="Client Delifast"
-                  />
-                  <h3>Olivier P.</h3>
-                  <h4>Restaurateur</h4>
-                </div>
-              </div>
-
-              <!-- Témoignage Domicom -->
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span
-                      >"Domicom nous a permis de mieux organiser les cours et la
-                      communication entre parents et enseignants."</span
-                    >
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-1.jpg"
-                    class="testimonial-img"
-                    alt="Client Domicom"
-                  />
-                  <h3>Patricia S.</h3>
-                  <h4>Parent</h4>
-                </div>
-              </div>
-
-              <!-- Témoignage AEEN -->
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span
-                      >"L'application AEEN est très intuitive et permet une
-                      meilleure coordination pour les étudiants."</span
-                    >
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-2.jpg"
-                    class="testimonial-img"
-                    alt="Client AEEN"
-                  />
-                  <h3>Emmanuel D.</h3>
-                  <h4>Etudiant</h4>
-                </div>
-              </div>
-
-              <!-- Témoignage FashionZone -->
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    <span
-                      >"FashionZone est parfait pour publier nos créations et
-                      toucher plus de clients. Très satisfait de
-                      l'application."</span
-                    >
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                  <img
-                    src="assets/img/testimonials/testimonials-1.jpg"
-                    class="testimonial-img"
-                    alt="Client FashionZone"
-                  />
-                  <h3>Linda R.</h3>
-                  <h4>Styliste</h4>
+                  <h4>Restauratrice</h4>
                 </div>
               </div>
             </div>
